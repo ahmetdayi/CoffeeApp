@@ -13,26 +13,31 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
 /*text-decoration: none*/
-a{
+a {
     text-decoration: none;
 }
+
 /*list-style-type: none*/
-li{
+li {
     list-style-type: none;
 }
+
 /*
   2. remove default margin
 */
 * {
     margin: 0;
 }
+
 /*
   3. allow percentage-based heights in the application
 */
 html, body {
     height: 100%;
 }
+
 /*
   typographic tweaks!
   4. add accessible line-height
@@ -42,6 +47,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
+
 /*
   6. improve media defaults
 */
@@ -49,106 +55,119 @@ img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
 }
+
 /*
   7. remove built-in form typography styles
 */
 input, button, textarea, select {
     font: inherit;
 }
+
 /*
   8. avoid text overflows
 */
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
+
 /*
   9. create a root stacking context
 */
 #root, #__next {
     isolation: isolate;
 }
+
 /*#endregion */
 /*#region PUBLIC VARIABLES */
-*{
-    font-family: 'Poppins',sans-serif;
+* {
+    font-family: 'Poppins', sans-serif;
 }
+
 /*#endregion*/
-.container{
+.container {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
 }
 /*#region HEADER CODE*/
 /*#region NAV CODE*/
-header{
+header {
     background-image: url("./image/header.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    height: 100vh;/*headerın tum gorulen ekranı kaplamasını sagladık*/
+    height: 100vh; /*headerın tum gorulen ekranı kaplamasını sagladık*/
 }
-.header-nav{
+
+.header-nav {
     display: flex;
     justify-content: space-between;
     padding: 40px 0;
 }
 
-.logo{
-    padding-bottom: 12px ;
+.logo {
+    padding-bottom: 12px;
     font-size: 20px;
     letter-spacing: 2px;
     border-bottom: 5px solid black;
-    border-radius:50% ;
-    box-shadow: 3px 1px rgba(69,39,34,0.88);
+    border-radius: 50%;
+    box-shadow: 3px 1px rgba(69, 39, 34, 0.88);
 }
 
-.header-menu{
+.header-menu {
     display: flex;
 }
-.item{
+
+.item {
     margin-left: 27px;
+
 }
 
-.menu-link{
-    color: black;
+.menu-link {
+    color: rgba(166,130,65,1);
     font-weight: bold;
     font-size: 15px;
+
 }
+
 /*#endregion NAV CODE*/
 /*#region HEADER TEXT CODE*/
 
-.header-text{
+.header-text {
     position: absolute;
-    top: 50% ;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%) ;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.welcome-text{
+.welcome-text {
     font-size: 8.4rem;
     font-family: 'Herr Von Muellerhoff', cursive;
     letter-spacing: 10px;
     line-height: 0.4;
-    font-weight:800;
+    font-weight: 800;
     color: rgba(184, 146, 74, 0.88);
     z-index: 0;
 }
-.welcome-text::first-letter{
+
+.welcome-text::first-letter {
     font-size: 10.3rem;
     color: rgba(184, 146, 74, 0.88);
     padding-right: 20px;
 }
-.slogan{
+
+.slogan {
     padding-top: 20px;
     color: rgba(184, 146, 74, 0.88);
     font-weight: bolder;
     z-index: 1;
 }
-.button{
+
+.button {
     display: block;
     color: white;
     font-size: 18px;
@@ -161,7 +180,8 @@ header{
     position: relative;
     overflow: hidden;
 }
-.btn-coffee::after{
+
+.btn-coffee::after {
     content: 'Buy';
     position: absolute;
     top: 100%;
@@ -175,7 +195,8 @@ header{
     justify-content: center;
     transition: 0.5s;
 }
-.btn-coffee:hover::after{
+
+.btn-coffee:hover::after {
     top: 0;
 }
 
@@ -183,10 +204,11 @@ header{
 /*#endregion */
 /*#region ABOUT CODE*/
 
-.about-title{
-    margin:60px 0;
+.about-title {
+    margin: 60px 0;
 }
-.about-title h3{
+
+.about-title h3 {
     width: 100%;
     text-align: center;
     font-size: 40px;
@@ -194,7 +216,8 @@ header{
     margin: 0 auto;
 
 }
-.about-title h3::after{
+
+.about-title h3::after {
     content: "";
     width: 30px;
     height: 3px;
@@ -203,64 +226,73 @@ header{
     margin: 0 auto;
 
 }
-i{
+
+i {
     color: rgba(184, 146, 74, 0.88);
     margin: 30px 0;
 }
 
-.about-header{
+.about-header {
     display: flex;
     justify-content: space-around;
     padding-bottom: 120px;
+    flex-wrap: wrap;
 
 }
-.about-img{
+
+.about-img {
     width: 40%;
     height: 500px;
 }
-.about-img img{
+
+.about-img img {
     width: 100%;
     height: 500px;
 }
 
-.about-content{
+.about-content {
     width: 40%;
     text-align: center;
 }
-.about-content h3{
+
+.about-content h3 {
     font-size: 40px;
     letter-spacing: 5px;
-    color:rgba(184, 146, 74, 0.88); ;
+    color: rgba(184, 146, 74, 0.88);;
     font-family: 'Herr Von Muellerhoff', cursive;
 }
 
 /*#endregion ABOUT CODE*/
 /*#region PORTFOLIO CODE*/
 
-.photo{
+.photo {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 20px;
 
 }
-.photo-item{
+
+.photo-item {
     width: 25%;
     overflow: hidden;
     height: 300px;
     position: relative;
+
 }
-.photo-item img{
+
+.photo-item img {
     object-fit: cover;
     width: 100%;
     transition: 0.5s;
 }
-.overlay{
+
+.overlay {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:rgba(82, 60, 23, 0.88) ;
+    background-color: rgba(82, 60, 23, 0.88);
     color: white;
     font-size: 40px;
     opacity: 0.6;
@@ -269,29 +301,167 @@ i{
     align-items: center;
     transition: 0.5s;
 }
-.photo-item:hover .overlay{
+
+.photo-item:hover .overlay {
     top: 0;
 }
-.photo-item:hover img{
+
+.photo-item:hover img {
     transform: scale(1.1);
 }
+
 /*#endregion PORTFOLİO CODE*/
 /*#region CONTACT CODE*/
-.contact-context{
+.contact-context {
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 20px;
     text-align: center;
 }
-.contact-context-item:not(.contact-context-item:last-child){
-margin-left: 20px;
+
+.contact-context-item:not(.contact-context-item:last-child) {
+    margin-left: 20px;
 }
-.contact-icon{
+
+.contact-icon {
     font-size: 25px;
 }
-.contact-text{
-    color: rgba(193,159,96);
+
+.contact-text {
+    color: rgba(193, 159, 96);
 }
 
 /*#endregion CONTACT CODE*/
+/*#region FOOTER CODE*/
+
+.footer{
+    background-color: black;
+}
+.footer-context {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-copyright {
+
+    color: rgba(162,128,65,0.33);
+    text-align: center;
+}
+.social-media-icon{
+    padding: 20px 0 30px;
+
+    width: 100%;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.social-item {
+
+}
+.social-item i {
+    font-size: 30px;
+}
+
+/*#endregion FOOTER CODE*/
+/*region RESPONSIVE CODE*/
+/*#region MENU*/
+#menu-icon{
+    display: none;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 800px){
+
+    .header-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-color: #2b1402da;
+        width: 100%;
+        transition: 0.7s;
+        overflow: hidden;
+    }
+    .item{
+        font-size: 40px;
+
+    }
+    .menu-link{
+        font-size: 20px;
+        color: rgb(155, 144, 123);
+    }
+    #menu-icon{
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+    .welcome-text{
+        font-size: 30px;
+    }
+}
+/*#endregion MENU*/
+/*#region ABOUT*/
+@media screen and (max-width: 610px) {
+    .about-img,.about-content{
+        width: 100%;
+    }
+    .about-img{
+        margin-bottom: 30px;
+    }
+}
+
+/*#endregion ABOUT*/
+/*region PORTFOLIO*/
+
+@media screen and (max-width: 640px) {
+    .photo{
+        flex-direction: column;
+
+    }
+    .photo-item{
+        width: 100%;
+        margin-bottom: 20px;
+        flex-basis: 50%;
+        overflow: hidden;
+    }
+    .photo-item img{
+        object-fit: cover;
+
+    }
+
+}
+/*endregion PORTFOLIO*/
+/*region CONTACT*/
+
+@media screen and (max-width: 600px) {
+    .contact-context{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-context-item{
+        margin-bottom: 20px;
+    }
+
+    .contact-icon{
+        width: 100%;
+    }
+}
+/*endregion CONTACT*/
+/*endregion RESPONSIVE CODE*/
 

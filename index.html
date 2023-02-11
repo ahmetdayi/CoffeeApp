@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>MY COFFEE SHOP</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="main-style.css">
     <link rel="stylesheet" href="fontawesome-free-6.3.0-web/css/all.css">
+
 </head>
 <body>
 <header>
@@ -21,6 +23,7 @@
                         <li class="item"><a href="#" class="menu-link">Discover</a></li>
                         <li class="item"><a href="#" class="menu-link">Contact</a></li>
                     </ul><!--header-menu-->
+                    <i class="fa-solid fa-bars" id="menu-icon" onclick="menuToggle()"></i>
                 </div><!--header-nav-menu-->
             </div><!--header-nav-->
             <div class="header-text">
@@ -37,10 +40,10 @@
         <div class="about-title"><h3>ABOUT</h3></div>
         <div class="about-header">
 
-            <div class="about-img">
-                <img src="./image/about.jpg" alt="" class="coffee-menu">
+            <div class="about-img anim-left">
+                <img loading="lazy" src="./image/about.jpg" alt="" class="coffee-menu">
             </div><!--about-img-->
-            <div class="about-content">
+            <div class="about-content anim-right">
                 <h3>OUR STORY</h3>
                 <i class="fa-solid fa-asterisk"></i>
                 <p class="about-content-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque,
@@ -55,42 +58,43 @@
 </section><!--about-section-->
 <section class="portfolio">
     <div class="photo">
-        <div class="photo-item"><img src="./image/cake1.jpg" alt="">
+        <div class="photo-item reveal-photo-item1">
+            <img loading="lazy" src="./image/cake1.jpg" alt="">
             <div class="overlay">
                 <i class="fa-sharp fa-solid fa-mug-hot"></i>
             </div><!--overlay-->
         </div><!--photo-item-->
-        <div class="photo-item"><img src="./image/cake2.jpg" alt="">
+        <div class="photo-item reveal-photo-item2"><img loading="lazy" src="./image/cake2.jpg" alt="">
             <div class="overlay">
                 <i class="fa-sharp fa-solid fa-mug-hot"></i>
             </div><!--overlay-->
         </div><!--photo-item-->
-        <div class="photo-item"><img src="./image/cake3.jpg" alt="">
+        <div class="photo-item reveal-photo-item3"><img loading="lazy" src="./image/cake3.jpg" alt="">
             <div class="overlay">
                 <i class="fa-sharp fa-solid fa-mug-hot"></i>
             </div><!--overlay-->
         </div><!--photo-item-->
-        <div class="photo-item"><img src="./image/coffee1.jpg" alt="">
+        <div class="photo-item reveal-photo-item4"><img loading="lazy" src="./image/coffee1.jpg" alt="">
             <div class="overlay">
                 <i class="fa-sharp fa-solid fa-mug-hot"></i>
             </div><!--overlay-->
         </div><!--photo-item-->
-        <div class="photo-item"><img src="./image/coffee2.jpg" alt="">
+        <div class="photo-item reveal-photo-item5"><img loading="lazy" src="./image/coffee2.jpg" alt="">
             <div class="overlay">
                 <i class="fa-sharp fa-solid fa-mug-hot"></i>
             </div><!--overlay-->
         </div><!--photo-item-->
-        <div class="photo-item"><img src="./image/coffee3.jpg" alt="">
+        <div class="photo-item reveal-photo-item6"><img loading="lazy" src="./image/coffee3.jpg" alt="">
             <div class="overlay">
                 <i class="fa-sharp fa-solid fa-mug-hot"></i>
             </div><!--overlay-->
         </div><!--photo-item-->
-        <div class="photo-item"><img src="./image/coffee4.jpg" alt="">
+        <div class="photo-item reveal-photo-item7"><img loading="lazy" src="./image/coffee4.jpg" alt="">
             <div class="overlay">
                 <i class="fa-sharp fa-solid fa-mug-hot"></i>
             </div><!--overlay-->
         </div><!--photo-item-->
-        <div class="photo-item"><img src="./image/coffee5.jpg" alt="">
+        <div class="photo-item reveal-photo-item8"><img loading="lazy" src="./image/coffee5.jpg" alt="">
             <div class="overlay">
                 <i class="fa-sharp fa-solid fa-mug-hot"></i>
             </div><!--overlay-->
@@ -101,10 +105,10 @@
     <div class="container">
         <div class="about-title"><h3>DISCOVER</h3></div>
         <div class="about-header">
-            <div class="about-img">
-                <img src="./image/menu.jpg" alt="" class="coffee-menu">
+            <div class="about-img anim-left">
+                <img loading="lazy" src="./image/menu.jpg" alt="" class="coffee-menu">
             </div><!--about-img-->
-            <div class="about-content">
+            <div class="about-content anim-right">
                 <h3>OUR STORY</h3>
                 <i class="fa-solid fa-asterisk"></i>
                 <p class="about-content-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque,
@@ -122,18 +126,18 @@
         <div class="container">
             <div class="about-title"><h3>CONTACT</h3></div>
             <div class="contact-context">
-                <div class="contact-context-item">
+                <div class="contact-context-item anim-top">
                     <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
                     <p class="contact-text">5071923322</p>
                     <br>
                     <p class="contact-text">5071912332</p>
                 </div><!--contact-context-item-->
-                <div class="contact-context-item">
+                <div class="contact-context-item anim-bottom">
                     <div class="contact-icon"><i class="fa-sharp fa-solid fa-location-dot"></i></div>
                     <p class="contact-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
                         ratione.</p>
                 </div><!--contact-context-item-->
-                <div class="contact-context-item">
+                <div class="contact-context-item anim-top">
                     <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
                     <p class="contact-text">coffeHouse@gmail.com</p>
                 </div><!--contact-context-item-->
@@ -147,8 +151,8 @@
             <div class="about-title">
                 <h3>ABOUT US</h3>
             </div>
-            <div class="footer-copyright">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, omnis. <br>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, eius.
+            <div class="footer-copyright">Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. Fugit, omnis. <br>
+                Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. Earum, eius.
             </div>
             <div class="social-media-icon">
                 <ul class="items">
@@ -161,5 +165,8 @@
     </div><!--footer-->
 </footer>
 
+
+
+<script src="./index.js"></script>
 </body>
 </html>
