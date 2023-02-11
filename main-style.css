@@ -181,7 +181,6 @@ header{
 
 /*#endregion HEADER TEXT CODE */
 /*#endregion */
-
 /*#region ABOUT CODE*/
 
 .about-title{
@@ -236,4 +235,63 @@ i{
 }
 
 /*#endregion ABOUT CODE*/
+/*#region PORTFOLIO CODE*/
+
+.photo{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+
+}
+.photo-item{
+    width: 25%;
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+}
+.photo-item img{
+    object-fit: cover;
+    width: 100%;
+    transition: 0.5s;
+}
+.overlay{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(82, 60, 23, 0.88) ;
+    color: white;
+    font-size: 40px;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.photo-item:hover .overlay{
+    top: 0;
+}
+.photo-item:hover img{
+    transform: scale(1.1);
+}
+/*#endregion PORTFOLİO CODE*/
+/*#region CONTACT CODE*/
+.contact-context{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.contact-context-item:not(.contact-context-item:last-child){
+margin-left: 20px;
+}
+.contact-icon{
+    font-size: 25px;
+}
+.contact-text{
+    color: rgba(193,159,96);
+}
+
+/*#endregion CONTACT CODE*/
 
