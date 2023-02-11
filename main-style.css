@@ -1,0 +1,239 @@
+/*#region IMPORT*/
+/*google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
+
+/*#endregion*/
+/*#region RESET CSS CODE*/
+
+
+/*
+  1. use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*text-decoration: none*/
+a{
+    text-decoration: none;
+}
+/*list-style-type: none*/
+li{
+    list-style-type: none;
+}
+/*
+  2. remove default margin
+*/
+* {
+    margin: 0;
+}
+/*
+  3. allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+}
+/*
+  typographic tweaks!
+  4. add accessible line-height
+  5. improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+  6. improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+  7. remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+  8. avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/*
+  9. create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+/*#endregion */
+/*#region PUBLIC VARIABLES */
+*{
+    font-family: 'Poppins',sans-serif;
+}
+/*#endregion*/
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/*#region HEADER CODE*/
+/*#region NAV CODE*/
+header{
+    background-image: url("./image/header.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;/*headerın tum gorulen ekranı kaplamasını sagladık*/
+}
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.logo{
+    padding-bottom: 12px ;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-bottom: 5px solid black;
+    border-radius:50% ;
+    box-shadow: 3px 1px rgba(69,39,34,0.88);
+}
+
+.header-menu{
+    display: flex;
+}
+.item{
+    margin-left: 27px;
+}
+
+.menu-link{
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+/*#endregion NAV CODE*/
+/*#region HEADER TEXT CODE*/
+
+.header-text{
+    position: absolute;
+    top: 50% ;
+    left: 50%;
+    transform: translateX(-50%) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcome-text{
+    font-size: 8.4rem;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    letter-spacing: 10px;
+    line-height: 0.4;
+    font-weight:800;
+    color: rgba(184, 146, 74, 0.88);
+    z-index: 0;
+}
+.welcome-text::first-letter{
+    font-size: 10.3rem;
+    color: rgba(184, 146, 74, 0.88);
+    padding-right: 20px;
+}
+.slogan{
+    padding-top: 20px;
+    color: rgba(184, 146, 74, 0.88);
+    font-weight: bolder;
+    z-index: 1;
+}
+.button{
+    display: block;
+    color: white;
+    font-size: 18px;
+    margin-top: 25px;
+    padding: 10px 15px;
+    background-color: rgba(184, 146, 74, 0.88);
+    text-align: center;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    position: relative;
+    overflow: hidden;
+}
+.btn-coffee::after{
+    content: 'Buy';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #5b2a07;
+    width: 100%;
+    height: 100%;
+    /*text-align: center; olmuyor o yuzden display le yapacaz*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.btn-coffee:hover::after{
+    top: 0;
+}
+
+/*#endregion HEADER TEXT CODE */
+/*#endregion */
+
+/*#region ABOUT CODE*/
+
+.about-title{
+    margin:60px 0;
+}
+.about-title h3{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: rgba(82, 60, 23, 0.88);
+    margin: 0 auto;
+
+}
+.about-title h3::after{
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: rgba(82, 60, 23, 0.88);
+    display: block;
+    margin: 0 auto;
+
+}
+i{
+    color: rgba(184, 146, 74, 0.88);
+    margin: 30px 0;
+}
+
+.about-header{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 120px;
+
+}
+.about-img{
+    width: 40%;
+    height: 500px;
+}
+.about-img img{
+    width: 100%;
+    height: 500px;
+}
+
+.about-content{
+    width: 40%;
+    text-align: center;
+}
+.about-content h3{
+    font-size: 40px;
+    letter-spacing: 5px;
+    color:rgba(184, 146, 74, 0.88); ;
+    font-family: 'Herr Von Muellerhoff', cursive;
+}
+
+/*#endregion ABOUT CODE*/
+
